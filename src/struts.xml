@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"  
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+  <!-- 更换掉struts2的对象创建工厂，action用spring创建 -->
+  <constant name="struts.objectFactory" value="spring"></constant>
+  <!-- 将struts的主题改成默认主题，防止其生成不必要的html代码 -->  
+    <constant name="struts.ui.theme" value="simple"/>
+   <package name="ss" namespace="/" extends="struts-default">
+       <action name="login" class="loginAction">
+          <result name="success">/jsp/loginMain.jsp</result>
+          <result name="error">/jsp/login.jsp</result>
+       </action>
+   </package>
+</struts>
