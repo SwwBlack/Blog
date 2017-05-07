@@ -40,6 +40,7 @@ public class LoginAction extends ActionSupport{
 						request.setAttribute("info","ÃÜÂë´íÎó!");
 						return ERROR;
 					}else{
+						request.setAttribute("info","×¢²á³É¹¦£¡ÇëµÇÂ¼");
 						return SUCCESS;
 					}
 				}

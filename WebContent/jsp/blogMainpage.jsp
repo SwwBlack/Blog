@@ -35,19 +35,10 @@
 <!-- InstanceBeginEditable name="EditRegion3" -->
 <div id="contains">
   <div id="left" style="width: 60%; height: 80%; float: left; font-style: italic; font-weight: bolder; text-align: right; font-size:18px;background:#C6C6C6" >
-  <h2 align="left">博客登陆</h2>
-  <p align="center"><font color="red">${requestScope.info}</font></p>
-  <form action="login" method="post">
-    <h2 align="left">用户名：<input type="text" name="username"></h2>
-    <h2 align="left"> 密 码：
-      <input type="password" name="password"></h2>
-  <h4 align="center">
-    <input type="submit" value="登陆">
-  </h4>
-  </form>
+  <h2 align="left">博客系统首页</h2>
   </div>
   <div id="right" style="width:40%;height:80%;float:right;color:#000000" >
-    <h3 align="center"><input type="text" name="searchAction">search</h3>
+    <h3 align="center"><input type="text">serach</h3>
     <table width="427" height="210" border="0" align="center">
   <tbody>
     <tr>
@@ -71,6 +62,7 @@
   <h3 align="justify">&nbsp;</h3>
   <h3 align="center">@by sww@博客网站系统</h3>
 </div>
+
 <!-- InstanceEndEditable -->
 </body>
 </html>

@@ -12,5 +12,10 @@
           <result name="success">/jsp/loginMain.jsp</result>
           <result name="error">/jsp/login.jsp</result>
        </action>
+       <action name="register" class="registerAction">
+          <result name="error">/jsp/register.jsp
+          </result>
+          <result name="success">/jsp/login.jsp</result>
+       </action>
    </package>
 </struts>
