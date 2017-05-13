@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>welcome</h1>
+<h1 align="center">404错误发生了哦</h1>
+<h2 align="center"><a href="/jsp/Main.jsp">点击返回主页面</a></h2>
 </body>
 </html>

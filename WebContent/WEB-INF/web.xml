@@ -39,4 +39,13 @@
     <filter-name>char</filter-name>
     <url-pattern>/*</url-pattern>
  </filter-mapping>
+ <!-- 错误界面 -->
+ <error-page>  
+  <error-code>404</error-code>  
+  <location>/jsp/404.jsp</location>  
+ </error-page>  
+ <error-page>  
+  <error-code>500</error-code>  
+  <location>/jsp/500.jsp</location>  
+ </error-page>
 </web-app>

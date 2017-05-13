@@ -29,6 +29,9 @@
 <bean id="userDao" class="com.daoImpl.UserDaoImpl">
   <property name="sessionFactory" ref="sessionFactory"></property>
 </bean>
+<bean id="articleDao" class="com.daoImpl.ArticleDaoImpl">
+   <property name="sessionFactory" ref="sessionFactory"></property>
+</bean>
 <!-- 结束dao -->
 <!-- 配置service -->
  
@@ -46,7 +49,9 @@
 </tx:advice>
 <aop:config>
     <aop:pointcut expression="execution(* com.service.*.*(..))" id="pointcut"/>
+    <aop:pointcut expression="execution(* com.test.*.*(..))" id="testcut"/>
     <aop:advisor advice-ref="txadvice" pointcut-ref="pointcut"/>
+    <aop:advisor advice-ref="txadvice" pointcut-ref="testcut"/>
 </aop:config>
 <!-- 事务切点 -->
 <!-- 事务结束 -->

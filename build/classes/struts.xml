@@ -8,8 +8,12 @@
   <!-- 将struts的主题改成默认主题，防止其生成不必要的html代码 -->  
     <constant name="struts.ui.theme" value="simple"/>
    <package name="ss" namespace="/" extends="struts-default">
+   <interceptors>
+       <interceptor name="userLoginInterceptor" class="com.util.UserLoginInterceptor"></interceptor>
+   </interceptors>
+
        <action name="login" class="loginAction">
-          <result name="success">/jsp/loginMain.jsp</result>
+          <result name="success">/jsp/Main.jsp</result>
           <result name="error">/jsp/login.jsp</result>
        </action>
        <action name="register" class="registerAction">
@@ -17,5 +21,46 @@
           </result>
           <result name="success">/jsp/login.jsp</result>
        </action>
+       <!-- 分页action -->
+       <action name="pageaction" class="articleShowAction">
+          <result name="success">/jsp/blogMainpage.jsp</result>
+       </action>
+       <action name="pageaction1" class="articleShowAction">
+          <result name="success">/jsp/Main.jsp</result>
+          <interceptor-ref name="userLoginInterceptor"></interceptor-ref>
+          <interceptor-ref name="defaultStack"></interceptor-ref>
+          <result name="login" type="redirect">/jsp/login.jsp</result>
+       </action>
+       <action name="pageaction2" class="userArticleShowAction">
+          <result name="success">/jsp/usermain.jsp</result>
+          <result name="login" type="redirect">/jsp/login.jsp</result>
+          <interceptor-ref name="userLoginInterceptor"></interceptor-ref>
+          <interceptor-ref name="defaultStack"></interceptor-ref>
+       </action>
+       <!--  -->
+       <action name="photoUpload" class="photoUploadAction">
+            <result name="success" type="chain">showphoto</result>
+            <result name="login" type="redirect">/jsp/login.jsp</result>
+            <interceptor-ref name="fileUpload">
+                <param name="allowedTypes">image/jpeg,image/jpg,image/png,image/gif</param>
+                <param name="maximumSize">5120000</param>
+               
+            </interceptor-ref>
+            <interceptor-ref name="userLoginInterceptor"></interceptor-ref>
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+       </action>
+       <action name="showphoto" class="showPhotoAction">
+           <result name="success">/jsp/album.jsp</result>
+           <result name="login">/jsp/login.jsp</result>
+          <interceptor-ref name="userLoginInterceptor"></interceptor-ref>
+          <interceptor-ref name="defaultStack"></interceptor-ref>
+       </action>
+       <action name="writeArticle" class="writeArticleAction">
+          <result name="success">/jsp/usermain.jsp</result>
+          <result name="login">/jsp/login.jsp</result>
+          <interceptor-ref name="userLoginInterceptor"></interceptor-ref>
+          <interceptor-ref name="defaultStack"></interceptor-ref>
+       </action>
+       
    </package>
 </struts>

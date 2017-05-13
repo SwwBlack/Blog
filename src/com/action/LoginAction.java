@@ -41,6 +41,8 @@ public class LoginAction extends ActionSupport{
 						return ERROR;
 					}else{
 						request.setAttribute("info","×¢²á³É¹¦£¡ÇëµÇÂ¼");
+						request.getSession().setAttribute("nickname",sUser.getNickname());
+						request.getSession().setAttribute("username",sUser.getUsername());
 						return SUCCESS;
 					}
 				}
