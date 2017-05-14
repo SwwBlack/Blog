@@ -9,6 +9,7 @@ public class Article {
     private String username;
     private Date date;
     private int hasread;
+    private int critiquecount;
     //
 	public int getId() {
 		return Id;
@@ -45,6 +46,12 @@ public class Article {
 	}
 	public void setHasread(int hasread) {
 		this.hasread = hasread;
+	}
+	public int getCritiquecount() {
+		return critiquecount;
+	}
+	public void setCritiquecount(int critiquecount) {
+		this.critiquecount = critiquecount;
 	}
     
 }

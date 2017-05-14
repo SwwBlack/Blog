@@ -43,7 +43,8 @@ public class ArticleService {
 			return 0;
 		}
 		else {
-			return articleDaoImpl.addNewArticle(article);
+			articleDaoImpl.addNewArticle(article);
+			return 1;
 		}
 			
 	}
@@ -68,8 +69,14 @@ public class ArticleService {
 		pageBean.setTotalPage(totalpage);    
 		pageBean.setList(list);    
 		pageBean.init();    
-		return pageBean;
-		
-		
+		return pageBean;	
+	}
+	//通过文章id获取文章内容
+	public Article getArticleById(int id){
+		return articleDaoImpl.getArticleById(id);
+	}
+	//更新文章
+	public void updateArticle(Article article){
+		articleDaoImpl.updateArticle(article);
 	}
 }

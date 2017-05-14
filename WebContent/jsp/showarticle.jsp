@@ -165,17 +165,19 @@ header, section, footer, aside, article, figure {
   <!-- end .sidebar1 --></div>
   <!-- InstanceBeginEditable name="EditRegion3" -->
   <article class="content">
-    <h1>用户首页</h1>
+  <s:set value="#session.carticle" var="at"></s:set>
+    <h1><s:property value="#at.title"/></h1>
+    <h3><s:property value="#at.content"/></h3>
+    <input type="button" value="点击评论">
     <section>
-      <h4 align="left">用户博客显示：</h4>
+      <h4 align="left">评论显示：</h4>
   <table>
-  <s:iterator value="#session.ulist" var="tx">
-  <a target="_blank" href="showArticle?aid=${tx.getId() }">
+  <s:iterator value="#session.clist" var="tx">
     <h3><s:property value="#tx.Id"/>
-    <s:property value="#tx.title"/></h3></a>
-    <h4 align="right">发表人：<s:property value="#session.username"/>|发表时间：<s:property value="#tx.date"/>|评论数(<s:property value="#tx.critiquecount"/>)|点击(<s:property value="#tx.hasread"/>)</h4>
+    <s:property value="#tx.content"/></h3>
+    <h4 align="right">发表人：<s:property value="#tx.username"/></h4>
   </s:iterator>
-  <s:set var="pagebeens" value="#request.upagebeens"></s:set>
+  <s:set var="pagebeens" value="#request.cpagebeens"></s:set>
   <tr>
   <td colspan="6" align="center" bgcolor="#5BA8DE">   
          共<s:property value="#pagebeens.allRow"/>条记录        
@@ -187,13 +189,13 @@ header, section, footer, aside, article, figure {
          </s:if>    
          <!-- currentPage为当前页 -->    
          <s:else>    
-           <a href="pageaction2?page=1">第一页</a>    
-           <a href="pageaction2?page=<s:property value="%{#pagebeens.currentPage-1}"/>">上一页</a>    
+           <a href="pageaction3?page=1">第一页</a>    
+           <a href="pageaction3?page=<s:property value="%{#pagebeens.currentPage-1}"/>">上一页</a>    
          </s:else>    
         
          <s:if test="%{#pagebeens.currentPage != #pagebeens.totalPage}">    
-         <a href="pageaction2?page=<s:property value="%{#pagebeens.currentPage+1}"/>">下一页</a>    
-         <a href="pageaction2?page=<s:property value="#pagebeens.totalPage"/>">最后一页</a>    
+         <a href="pageaction3?page=<s:property value="%{#pagebeens.currentPage+1}"/>">下一页</a>    
+         <a href="pageaction3?page=<s:property value="#pagebeens.totalPage"/>">最后一页</a>    
          </s:if>    
         
          <s:else>    

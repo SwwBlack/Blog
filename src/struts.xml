@@ -37,6 +37,11 @@
           <interceptor-ref name="userLoginInterceptor"></interceptor-ref>
           <interceptor-ref name="defaultStack"></interceptor-ref>
        </action>
+       <action name="pageaction3" class="showArticle">
+          <result name="login" type="redirect">/jsp/login.jsp</result>
+          <interceptor-ref name="userLoginInterceptor"></interceptor-ref>
+          <interceptor-ref name="defaultStack"></interceptor-ref>
+       </action>
        <!--  -->
        <action name="photoUpload" class="photoUploadAction">
             <result name="success" type="chain">showphoto</result>
@@ -61,6 +66,8 @@
           <interceptor-ref name="userLoginInterceptor"></interceptor-ref>
           <interceptor-ref name="defaultStack"></interceptor-ref>
        </action>
-       
+       <action name="showArticle" class="showArticle">
+           <result name="success">/jsp/showarticle.jsp</result>
+       </action>
    </package>
 </struts>

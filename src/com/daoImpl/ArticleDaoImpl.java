@@ -39,7 +39,7 @@ public class ArticleDaoImpl extends HibernateDaoSupport implements ArticleDao {
 
 	@Override
 	//添加新文章
-	public int addNewArticle(Article article) {
+	public void addNewArticle(Article article) {
 		// TODO Auto-generated method stub
 		Session session = getSession();
 		String sql = "insert into tb_article(TITLE,CONTENT,USERNAME,DATE) values(?,?,?,?)";
@@ -50,7 +50,6 @@ public class ArticleDaoImpl extends HibernateDaoSupport implements ArticleDao {
 		query.setString(2, article.getUsername());
 		query.setDate(3,new java.util.Date());
 		query.executeUpdate();
-		return 1;
 	}
     //获取总记录数
 	@Override
@@ -90,6 +89,32 @@ public class ArticleDaoImpl extends HibernateDaoSupport implements ArticleDao {
 		Session session = getSession();
 		String sql = "select * from tb_article where USERNAME='"+username+"'";
 		return session.createSQLQuery(sql).list().size();
+	}
+
+	@SuppressWarnings("rawtypes")
+	@Override
+	//点击文章通过文章id获取文章具体信息
+	public Article getArticleById(int id) {
+		// TODO Auto-generated method stub
+		Session session = getSession();
+		String sql = "select * from tb_article where Id='"+id+"'";
+		SQLQuery query =  session.createSQLQuery(sql).addEntity(Article.class);
+		Article article = (Article) query.list().get(0);
+		System.out.println(article.getContent());
+		return article;
+				
+	}
+    //更新文章
+	@SuppressWarnings("rawtypes")
+	@Override
+	public void updateArticle(Article article) {
+		// TODO Auto-generated method stub
+		Session session = getSession();
+		String sql = "update tb_article SET HASREAD=? where ID=?";
+		SQLQuery query = session.createSQLQuery(sql);
+		query.setInteger(0, article.getHasread());
+		query.setInteger(1, article.getId());
+		query.executeUpdate();
 	}
 
 }

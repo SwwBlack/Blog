@@ -3,6 +3,7 @@ package com.util;
 import java.util.List;
 
 import com.bean.Article;
+import com.bean.Critique;
 
 public class Page {
 	private List<Article> list;  //要返回的某一页的记录列表    
@@ -14,6 +15,7 @@ public class Page {
 	private boolean isLastPage;  //是否为最后一页    
 	private boolean hasPreviousPage;  //是否有前一页    
 	private boolean hasNextPage;  //是否有下一页    
+	private List<Critique> cList;
 	//Set and get方法... 
 	
 	//PageBean中的具体方法：    
@@ -26,12 +28,7 @@ public class Page {
 	this.hasPreviousPage = hasPreviousPage;    
 	this.hasNextPage = hasNextPage;    
 	}    
-	public List<Article> getList() {
-		return list;
-	}
-	public void setList(List<Article> list) {
-		this.list = list;
-	}
+	
 	public int getAllRow() {
 		return allRow;
 	}
@@ -108,5 +105,22 @@ public class Page {
 	public static int countCurrentPage(int page){    
 	    final int curpage = (page == 0 ? 1 : page);    
 	    return curpage;    
-	}      
+	}
+
+	public List<Article> getList() {
+		return list;
+	}
+
+	public void setList(List<Article> list) {
+		this.list = list;
+	}
+
+	public List<Critique> getcList() {
+		return cList;
+	}
+
+	public void setcList(List<Critique> cList) {
+		this.cList = cList;
+	}
+   
 }

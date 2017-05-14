@@ -32,6 +32,12 @@
 <bean id="articleDao" class="com.daoImpl.ArticleDaoImpl">
    <property name="sessionFactory" ref="sessionFactory"></property>
 </bean>
+<bean id="critiqueDao" class="com.daoImpl.CritiqueDaoImpl">
+    <property name="sessionFactory" ref="sessionFactory"></property>
+</bean>
+<bean id="onclickDao" class="com.daoImpl.OnclickDaoImpl">
+   <property name="sessionFactory" ref="sessionFactory"></property>
+</bean>
 <!-- 结束dao -->
 <!-- 配置service -->
  
