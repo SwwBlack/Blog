@@ -13,7 +13,9 @@
 </head>
 
 <body>
-<s:action name="pageacion1?page=1"></s:action>
+<s:action name="pageaction1" namespace="/">
+<s:param name="page" value="1"></s:param>
+</s:action>
 <div class="container">
   <header>
     <table width="1200px" border="0" background="${pageContext.request.contextPath }/image/3.jpg">
@@ -28,7 +30,7 @@
     </tr>
     <tr>
       <td height="54"></td>
-      <td class="htd"><a href="pageaction1?page=1"><input type="button" value="博客首页" class="button1"></a>&nbsp;<a href="pageaction2?page=1"><input type="button" value="用户首页" class="button1"></a>&nbsp;<a href="personlity.jsp"><input type="button" value="个性化设置" class="button1"></a>&nbsp;<a href="writeArticle.jsp"><input type="button" value="写日志" class="button1"></a>&nbsp;&nbsp;<a href="album.jsp"><input type="button" value="相册" class="button1"></a></td>
+      <td class="htd"><a href="Main.jsp"><input type="button" value="博客首页" class="button1"></a>&nbsp;<a href="usermain.jsp"><input type="button" value="用户首页" class="button1"></a>&nbsp;<a href="personlity.jsp"><input type="button" value="个性化设置" class="button1"></a>&nbsp;<a href="writeArticle.jsp"><input type="button" value="写日志" class="button1"></a>&nbsp;&nbsp;<a href="album.jsp"><input type="button" value="相册" class="button1"></a></td>
     </tr>
   </tbody>
 </table>
@@ -42,9 +44,9 @@
         </li>
         <li> 首页导航</li>
         
-        <li><a href="pageaction2?page=1">用户首页</a></li>
+        <li><a href="usermain.jsp">用户首页</a></li>
         
-        <li><a href="pageaction1?page=1">博客首页</a></li>
+        <li><a href="Main.jsp">博客首页</a></li>
         
         <li><a href="personlity.jsp">个性化设置</a></li>
         

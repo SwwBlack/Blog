@@ -29,11 +29,6 @@ select, input {
     vertical-align: middle;
 }
 /*设置下拉列表和表单的垂直对齐方式。*/
-select, input, textarea {
-    font-size: 12px;
-    margin: 0;
-}
-/*设置上述标签的字体大小和并清除margin*/
 textarea {
     resize: none;
 }

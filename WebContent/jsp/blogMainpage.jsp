@@ -14,6 +14,9 @@
 <script language="javascript" src="../js/button.js"></script>
 </head>
 <body>
+<s:action name="pageaction" namespace="/">
+  <s:param name="page" value="1"></s:param>
+</s:action>
 <div>
 <table id="table1">
     <tr class="trone">

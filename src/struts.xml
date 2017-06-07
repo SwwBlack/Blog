@@ -13,7 +13,7 @@
    </interceptors>
 
        <action name="login" class="loginAction">
-          <result name="success" type="chain">pageaction1</result>
+          <result name="success">/jsp/Main.jsp</result>
           <result name="error">/jsp/login.jsp</result>
        </action>
        <action name="register" class="registerAction">

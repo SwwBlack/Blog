@@ -6,7 +6,7 @@
     border: 0;
     outline: 0;
     padding: 6px 10px;
-    line-height: 24px;
+    line-height: 36px;
     margin: 32px auto;
     -webkit-transition: all 0s ease-in 0.1ms;
     -moz-transition: all 0s ease-in 0.1ms;
@@ -14,8 +14,8 @@
 }
 .left input[type="text"],.left input[type="password"]{
     background-color: #FFFFFF;
-    font-size: 16px;
-    color: #50a3a2;
+    font-size:25px;
+    color: #8080ff;
 }
 .left input[type="submit"]{
 	width:345px;
