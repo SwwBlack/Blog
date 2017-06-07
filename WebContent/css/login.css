@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+.left input{
+    width: 320px;
+    display: block;
+    height: 36px;
+    border: 0;
+    outline: 0;
+    padding: 6px 10px;
+    line-height: 24px;
+    margin: 32px auto;
+    -webkit-transition: all 0s ease-in 0.1ms;
+    -moz-transition: all 0s ease-in 0.1ms;
+    transition: all 0s ease-in 0.1ms;
+}
+.left input[type="text"],.left input[type="password"]{
+    background-color: #FFFFFF;
+    font-size: 16px;
+    color: #50a3a2;
+}
+.left input[type="submit"]{
+	width:345px;
+}
+.left input[type="submit"]:hover{
+    cursor: pointer;
+    width: 345px;
+    background-color: #808080;
+}
+.left p{
+    font-size: 50px;
+}

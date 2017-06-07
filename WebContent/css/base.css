@@ -1,0 +1,120 @@
+@charset "UTF-8";
+/*设置字符集*/
+/*css初始化*/
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+/*清除默认padding和margin*/
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+/*清除表单类标签默认样式*/
+ul, ol {
+    list-style: none;
+}
+/*清除列表小圆点或序号*/
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+/*清除文本框上下padding，并设置字体*/
+
+select, input {
+    vertical-align: middle;
+}
+/*设置下拉列表和表单的垂直对齐方式。*/
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+/*设置上述标签的字体大小和并清除margin*/
+textarea {
+    resize: none;
+}
+/*固定文本框大小，用户无法调整元素的尺寸。*/
+/*防止拖动*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+/*  设置图片的垂直方式，可以去掉图片底侧默认的3像素空白缝隙
+table {
+    border-collapse: collapse;
+}*/
+/*合并表格边框*/
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+    color: #666;
+    background: #fff
+}
+/*字号 行高 字体 合写。 Arial, Verdana指的是宋体，"\5b8b\4f53" 是宋体的另一种表示方式，工作中用得比较多*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1; /*IE/7/6兼容*/
+}
+/*清除浮动的方式，双伪元素清除浮动*/
+a {
+    color: #666;
+    text-decoration: none;
+}
+/*清除a下划线，并设置字体颜色*/
+a:hover {
+    color: #C81623;
+}
+/*设置悬浮时的颜色*/
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+/*设置标题元素的文本修饰和字号*/
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+/*用作css钩子，里面放一下比较小的内容*/
+.col-red {
+    color: #C81623 !important;
+}
+/*文档的颜色*/
+.w {
+    width: 1210px;
+    margin: 0 auto;
+}
+/*版心 */
+.fl {
+    float: left
+}
+/*左浮动*/
+.fr {
+    float: right
+}
+/*右浮动*/
+.al {
+    text-align: left
+}
+/*文本居左*/
+.ac {
+    text-align: center
+}
+/*文本居中*/
+.ar {
+    text-align: right
+}
+/*文本居右*/
+.hide {
+    display: none
+}
+/*隐藏元素*/

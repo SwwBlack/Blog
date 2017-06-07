@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+.content p:first-child{
+	font-size: 30px;
+	text-align: center;
+}
+/* ~~ 此分组的选择器为 .content 区域中的列表提供了空间 ~~ */
+.content ul, .content ol {
+	padding: 0 15px 15px 40px; /* 此填充反映上述标题和段落规则中的右填充。填充放置于下方可用于间隔列表中其它元素，置于左侧可用于创建缩进。您可以根据需要进行调整。 */
+}
+/*分页记录居中*/
+.pagediv{
+	text-align: center;
+	background-color: #8080ff;
+	color: #ffffff;
+	width:900px;
+}

@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+/*分页记录居中*/
+.pagediv{
+	text-align: center;
+	background-color: #8080ff;
+	color: #ffffff;
+	width:900px;
+}
+.content p:first-child{
+	font-size: 30px;
+	text-align: center;
+}

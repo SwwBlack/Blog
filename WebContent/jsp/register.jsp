@@ -4,59 +4,103 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>注册页面</title>
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/index.css">
+<link rel="stylesheet" href="../css/register.css"j>
+<script language="javascript" src="../js/jquery-3.2.1.min.js"></script>
+<script language="javascript" src="../js/button.js"></script>
 </head>
 <body>
-<div id="contains">
-  <div id="left" style="width: 60%; height: 80%; float: left; font-style: italic; font-weight: bolder; text-align: right; font-size:18px;background:#C6C6C6" >
-  <h2 align="left">新博客注册  </h2>
-  <p align="center"><font color="red">${requestScope.info}</font></p>
+<div>
+<table id="table1">
+    <tr class="trone">
+        <td class="textone"> 博客网站系统</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr class="trone">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr class="trone">
+        <td >&nbsp;</td>
+        <td>
+            <div align="right"><a href="blogMainpage.jsp"><input type="button" value="博客首页" class="button">
+        </a>&nbsp;   <a href="register.jsp">
+            <input type="button" value="新博客注册" class="button">
+        </a>  &nbsp;<a href="login.jsp">
+                <input type="button" value="博客登陆" class="button">
+                </a>
+            </div>
+        </td>
+    </tr>
+</table>
+</div>
+<div class="contains">
+    <div class="left">
+  <p class="ptwo" style="font-size:25px">博客注册：<font color="red">${requestScope.info}</font></p>
+  <div>
   <form id="register" action="register" method="post">
-  <p align="left">用户名：
-       <input name="username" type="text" autocomplete="off">
-      </p>
-    <p align="left">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：
-      <input type="password" name="password">
-      </p>
-    <p align="left">确认密码:
-      <input type="password" name="repassword">
-      </p>
-    <p align="left">昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：
-      <input type="text" name="nickname">
-      </p>
-    <p align="left">密保问题：
-      <input type="text" name="question">
-      </p>
-    <p align="left">密保答案：
-      <input type="text" name="answer">
-    </p>
-    <h4 align="center"><input type="submit" value="注册"></h4>
+  <div class="register_ul">
+  <div class="row_one">
+  <div class="row_left">
+  <span>用户名：</span>
+    <input type="text" name="username">
+    </div>
+    <div class="row_right">
+  <span>密码:</span>&nbsp;<input type="password" name="password">
+  </div>
+  </div>
+    <div class="row_one">
+  <div class="row_left">
+  <span>确认密码：</span>
+    <input type="password" name="repassword">
+    </div>
+    <div class="row_right">
+  <span>昵称:</span>&nbsp;<input type="text" name="nickname">
+  </div>
+  </div>
+    <div class="row_one">
+  <div class="row_left">
+  <span>密保问题：</span>
+    <input type="text" name="question">
+    </div>
+    <div class="row_right">
+  <span>答案:</span>&nbsp;<input type="text" name="answer">
+  </div>
+  </div>
+  <div class="register_button">
+     <input type="submit" value="注册">
+  </div>
+  </div>
   </form>
   </div>
-  <div id="right" style="width:40%;height:80%;float:right;color:#000000" >
-    <h3 align="center"><input type="text">search</h3>
-    <table width="427" height="210" border="0" align="center">
-  <tbody>
-    <tr>
-      <td width="291" align="center">页面导航</td>
-    </tr>
-    <tr>
-      <td align="center"><a href="blogMainpage.jsp">博客首页</a></td>
-    </tr>
-    <tr>
-      <td height="59" align="center"><a href="register.jsp">新博客注册</a></td>
-    </tr>
-    <tr>
-      <td height="62" align="center"><a href="login.jsp">博客登陆</a></td>
-    </tr>
-  </tbody>
-</table>
-  </div>
-  <h3 align="justify">&nbsp;</h3>
-  <h3 align="justify">&nbsp;</h3>
-  <h3 align="justify">&nbsp;</h3>
-  <h3 align="justify">&nbsp;</h3>
-  <h3 align="center">@by sww@博客网站系统</h3>
+    </div>
+    <div class="right">
+        <div>
+            <input type="text" name="search_text">
+            <input type="button" id="search_button" value="search">
+        </div>
+        <div id="divtable">
+        <br>
+        <br>
+          <p class="textone" style="font-size:36px">页面导航</p>
+          <br>
+          <br>
+         <a> <button class="button1" >博客首页</button></a>
+         <br>
+         <a> <button class="button1" >新博客注册</button></a>
+         <br>
+         <a> <button class="button1" >博客登陆</button></a>
+        </div>
+    </div>
+    
 </div>
+<div id="foot">
+       <p>@by sww@博客网站系统</p>
+</div>
+</body>
 </body>
 </html>

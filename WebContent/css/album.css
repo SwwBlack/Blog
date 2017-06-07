@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+.content input{
+	height: 30px;
+	width: 100px
+}
+.photo{
+	float:left;
+}
+.photo img{
+	width:200px;
+	height:200px;
+}
+.container{
+	z-index: 1000;
+}
+.photobigshow{
+	z-index: 1002;
+	display: none;
+}
+.photobigshow img{
+	width:600px;
+	height:800px;
+	opacity: 
+}

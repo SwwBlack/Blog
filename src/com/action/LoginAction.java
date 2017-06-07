@@ -2,6 +2,7 @@ package com.action;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -18,6 +19,7 @@ public class LoginAction extends ActionSupport{
     private UserService usersevices;
 	private String username;
 	private String password;
+	//private final Logger logger = Logger.getLogger("OperateLog");//定义日志对象
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
@@ -40,7 +42,7 @@ public class LoginAction extends ActionSupport{
 						request.setAttribute("info","密码错误!");
 						return ERROR;
 					}else{
-						request.setAttribute("info","注册成功！请登录");
+						//logger.info("用户"+sUser.getUsername()+"登录了");//登陆信息写入日志
 						request.getSession().setAttribute("nickname",sUser.getNickname());
 						request.getSession().setAttribute("username",sUser.getUsername());
 						return SUCCESS;

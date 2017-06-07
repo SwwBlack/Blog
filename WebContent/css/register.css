@@ -1,0 +1,41 @@
+@CHARSET "UTF-8";
+.ptwo{
+	text-align: left;
+}
+.left input{
+    width: 200px;
+    border: 0;
+    height: 28px;
+}
+.left input[type="text"],.left input[type="password"]{
+    background-color: #FFFFFF;
+    font-size: 16px;
+    color: #50a3a2;
+}
+.row_one{
+	width:800px;
+	height:110;
+}
+.row_left{
+	float:left;
+	width:400px;
+	height:110px;
+	line-height:110px;
+}
+.row_right{
+	float:right;
+	width:400px;
+	height:110px;
+	line-height:110px;
+}
+.register_ul span{
+	font-size:25px;	
+}
+.register_button input{
+	position: absolute;
+	right: 20px;
+	bottom: 30px;
+}
+.register_button input:HOVER {
+	background-color: #808080;
+}

@@ -20,9 +20,9 @@ public class UserLoginInterceptor extends AbstractInterceptor{
 		ActionContext context = arg0.getInvocationContext();
 		HttpServletRequest request = ServletActionContext.getRequest();
 		Map session = context.getContext().getSession();
-        System.out.println(session.values());
+       // System.out.println(session.values());
 		String username = (String) session.get("username");
-		System.out.println(username+"À¹½ØÆ÷");
+		//System.out.println(username+"À¹½ØÆ÷");
 		if(username==null||username.equals("")){
 			request.setAttribute("info", "ÇëÏÈµÇÂ¼£¡");
 			return Action.LOGIN;

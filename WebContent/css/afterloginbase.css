@@ -1,0 +1,110 @@
+@CHARSET "UTF-8";
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #42413C;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+/* ~~ 元素/标签选择器 ~~ */
+ul, ol, dl { /* 由于浏览器之间的差异，最佳做法是在列表中将填充和边距都设置为零。为了保持一致，您可以在此处指定所需的数值，也可以在列表包含的列表项（LI、DT 和 DD）中指定所需的数值。请记住，除非编写一个更具体的选择器，否则，在此处进行的设置将层叠到 .nav 列表。 */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* 删除上边距可以解决边距会超出其包含的块的问题。剩余的下边距可以使块与后面的任何元素保持一定距离。 */
+	padding-right: 15px;
+	padding-left: 15px; /* 向块内的元素侧边（而不是块元素自身）添加填充可避免使用任何方框模型数学。此外，也可将具有侧边填充的嵌套块用作替代方法。 */
+}
+a img { /* 此选择器将删除某些浏览器中显示在图像周围的默认蓝色边框（当该图像包含在链接中时） */
+	border: none;
+}
+/* ~~ 站点链接的样式必须保持此顺序，包括用于创建悬停效果的选择器组在内。 ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* 除非将链接设置成极为独特的外观样式，否则最好提供下划线，以便可从视觉上快速识别 */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠标使用者相同的悬停体验。 */
+	text-decoration: none;
+}
+/* ~~ 此固定宽度容器包含所有其它块 ~~ */
+.container {
+	width: 1200px;
+	background-color: #FFFFFF;
+	margin: 0 auto; /* 侧边的自动值与宽度结合使用，可以将布局居中对齐 */
+}
+/* ~~ 标题未指定宽度。它将扩展到布局的完整宽度。 ~~ */
+header {
+	width:1200px;
+}
+.sidebar1 {
+	float: right;
+	width: 300px;
+	background-color: #EADCAE;
+	padding-bottom: 10px;
+}
+.content {
+	padding: 10px 0;
+	width: 900px;
+	float: right;
+}
+.nav{
+	list-style: none;/*删除列表标记*/
+	border-top: 1px solid #666;/*创建上边框*/
+	margin-bottom:15px;
+}
+.nav li{
+	border-bottom: 1px solid #666;
+	text-align: center;
+	width:300px;
+	background-color: #C6D580;
+	height: 50px;
+	line-height: 50px;
+}
+.nav a{
+	text-decoration: none;
+	width:300px;
+	display: block; /* 这将为链接赋予块属性，使其填满包含它的整个 LI。这样，整个区域都可以响应鼠标单击操作。 */
+}
+.nav a:hover{
+	background-color: #c0c0c0;
+}
+/* ~~ 脚注 ~~ */
+footer {
+	padding: 10px 0;
+	background-color: #CCC49F;
+	position: relative;/* 这可以使 IE6 hasLayout 以正确方式进行清除 */
+	clear: both; /* 此清除属性强制 .container 了解列的结束位置以及包含列的位置 */
+}
+
+/*HTML5 支持 - 将新 HTML5 标签设置为 display:block，以使浏览器知道如何正确呈现标签。 */
+header, section, footer, aside, article, figure {
+	display: block;
+}
+/*button样式*/
+.button1{
+	width: 100px;
+	height:38px;
+    line-height: 38px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    /*text-shadow:1px 1 1px #333;*/
+    border-radius: 5px;
+    margin:0 10px 20px 0;
+    position: relative;
+    overflow: hidden;
+    background-color: #C6C6C6;
+    border:none;
+}
+.htd{
+	text-align: right;
+}
+/*鼠标获取按钮颜色变化*/
+.button:hover{
+	backgroud-color:#050433;
+}

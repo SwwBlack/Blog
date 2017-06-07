@@ -13,7 +13,7 @@
    </interceptors>
 
        <action name="login" class="loginAction">
-          <result name="success">/jsp/Main.jsp</result>
+          <result name="success" type="chain">pageaction1</result>
           <result name="error">/jsp/login.jsp</result>
        </action>
        <action name="register" class="registerAction">
@@ -68,6 +68,9 @@
        </action>
        <action name="showArticle" class="showArticle">
            <result name="success">/jsp/showarticle.jsp</result>
+           <result name="login">/jsp/login.jsp</result>
+          <interceptor-ref name="userLoginInterceptor"></interceptor-ref>
+          <interceptor-ref name="defaultStack"></interceptor-ref>
        </action>
    </package>
 </struts>

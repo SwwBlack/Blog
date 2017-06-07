@@ -1,0 +1,35 @@
+/* CSS Document */
+.pone{
+	font-size:40px;
+	margin:5px auto;
+}
+.ptwo{
+	position:absolute;
+	left:10px;
+}
+.tdjilu{
+	font-size:25px;
+	color:#000000;
+	background-color:#8080ff;
+	width:700px;
+	height:60px;
+	border: 3px solid #808080;
+}
+.page li{
+	font-size:x-large;
+}
+.tdjilu li:last-child{
+      margin:40px 20px auto 580px;
+}
+.jilu_div{
+	position: relative;
+}
+.tdjilu li:first-child{
+     position: absolute;
+     left:20px;
+     line-height: 60px;
+}
+.tdjilu:HOVER{
+	background-color: #808080;
+}
+
